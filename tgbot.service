@@ -1,0 +1,14 @@
+[Unit]
+Description=Telegram Bot
+After=network.target
+
+[Service]
+User=bogdan
+Group=bogdan
+
+WorkingDirectory=/home/bogdan/Telebot_Python/
+Environment="PYTHONPATH=/home/bogdan/Telebot_Python/"
+ExecStart=/home/bogdan/Telebot_Python/.venv/bin/python /home/bogdan/Telebot_Python/Main.py
+
+[Install]
+WantedBy=multi-user.target
